@@ -1,0 +1,329 @@
+/* ── Tokens ── */
+:root {
+  --bg: #f9f9f8;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #6b6b6b;
+  --accent: #2563eb;
+  --accent-soft: #eff6ff;
+  --border: #e5e5e3;
+  --radius: 10px;
+  --shadow: 0 1px 4px rgba(0,0,0,0.07);
+  --transition: 0.2s ease;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.back-btn {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.back-btn:hover {
+  color: var(--text);
+  background: var(--bg);
+}
+
+.app-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* ── Layout ── */
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* ── Search ── */
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.search-bar input:focus {
+  border-color: var(--accent);
+}
+
+.search-bar input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-bar button {
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+#searchBtn {
+  background: var(--text);
+  color: var(--bg);
+}
+
+#searchBtn:hover { opacity: 0.85; }
+
+#locationBtn {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+  font-size: 16px;
+  padding: 10px 12px;
+}
+
+#locationBtn:hover { background: var(--bg); }
+
+/* ── Error ── */
+.error-msg {
+  font-size: 13px;
+  color: #dc2626;
+  margin-bottom: 16px;
+  min-height: 20px;
+}
+
+/* ── Weather card ── */
+.weather-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 16px;
+  animation: fadeUp 0.35s ease forwards;
+}
+
+.weather-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.city-name {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.weather-date {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.weather-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.temp-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.temp-block img {
+  width: 64px;
+  height: 64px;
+}
+
+.temperature {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  text-align: center;
+}
+
+/* ── Stats ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.stat {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 12px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ── Forecast ── */
+.forecast-section {
+  animation: fadeUp 0.4s ease 0.1s both;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.forecast-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 10px;
+  text-align: center;
+  transition: border-color var(--transition);
+}
+
+.forecast-card:hover {
+  border-color: var(--accent);
+}
+
+.forecast-day {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.forecast-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 4px;
+}
+
+.forecast-high {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.forecast-low {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.forecast-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  text-transform: capitalize;
+}
+
+/* ── Empty state ── */
+.empty-state {
+  text-align: center;
+  padding: 64px 0;
+}
+
+.empty-icon  { font-size: 48px; margin-bottom: 16px; }
+.empty-title { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.empty-desc  { font-size: 14px; color: var(--text-muted); }
+
+/* ── Loading ── */
+.loading {
+  text-align: center;
+  padding: 64px 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto 12px;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Mobile ── */
+@media (max-width: 520px) {
+  .stats-grid    { grid-template-columns: repeat(2, 1fr); }
+  .forecast-grid { grid-template-columns: repeat(3, 1fr); }
+  .temperature   { font-size: 32px; }
+  .city-name     { font-size: 20px; }
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jose Diego Cordova — Junior Web Developer</title>
+  <meta name="description" content="Jose Diego Cordova is a junior web developer in the Philippines, open to opportunities. Explore responsive web projects built with JavaScript, React, browser APIs, and more.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="container nav-inner">
+      <span class="nav-logo">Jose Diego Cordova</span>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <!-- Sun icon -->
+        <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon icon -->
+        <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-copy">
+        <div class="hero-eyebrow">
+          <span class="status-dot"></span>
+          1st year CS student
+        </div>
+        <h1>Web developer<br>ready to contribute.</h1>
+        <p class="hero-sub">
+          I'm Jose Diego, a 1st year CS student in the Philippines. I build
+          responsive web apps with JavaScript and React, and I enjoy taking ideas
+          from a rough sketch to a useful, working product.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">See my work</a>
+          <a href="mailto:diegocordova0419@gmail.com?subject=Let%27s%20work%20together" class="btn btn-outline">Let's talk</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Jose Diego portrait">
+        <img src="assets/jose-profile.png" alt="Jose Diego Cordova portrait" class="profile-photo">
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <section id="projects">
+      <p class="section-label">Selected work</p>
+      <p class="projects-intro">A selection of projects built to solve everyday problems and explore thoughtful, user-friendly web experiences.</p>
+      <div class="projects-grid" id="projectsGrid">
+
+        <article class="project-card" data-project="weather">
+          <div class="project-header">
+            <span class="project-icon">🌤️</span>
+            <a class="link-btn" href="weather/index.html">↗ View live</a>
+          </div>
+          <p class="project-title">Weather Dashboard</p>
+          <p class="project-desc">A real-time weather app using the OpenWeather API with a 5-day forecast and responsive layout.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">API</span>
+          </div>
+          <button class="card-hint" type="button" data-project-details="weather">Project details →</button>
+        </article>
+
+        <article class="project-card" data-project="snake">
+          <div class="project-header">
+            <span class="project-icon">🎮</span>
+            <a class="link-btn" href="snake/index.html">↗ View live</a>
+          </div>
+          <p class="project-title">Canvas Snake Game</p>
+          <p class="project-desc">A browser snake game built with pure JS and Canvas API — keyboard and touch controls.</p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Canvas API</span>
+            <span class="tag">CSS</span>
+          </div>
+          <button class="card-hint" type="button" data-project-details="snake">Project details →</button>
+        </article>
+
+        <article class="project-card" data-project="movies">
+          <div class="project-header">
+            <span class="project-icon">🍿</span>
+            <a class="link-btn" href="movies/index.html">↗ View live</a>
+          </div>
+          <p class="project-title">Movie Tracker — React</p>
+          <p class="project-desc">Search and save movies using the TMDB API. Built with React hooks and localStorage.</p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">TMDB API</span>
+          </div>
+          <button class="card-hint" type="button" data-project-details="movies">Project details →</button>
+        </article>
+
+        <article class="project-card" data-project="taskboard">
+          <div class="project-header">
+            <span class="project-icon">✅</span>
+            <a class="link-btn" href="taskboard/index.html">↗ View live</a>
+          </div>
+          <p class="project-title">Daymark — Task Planner</p>
+          <p class="project-desc">A lightweight task planner with status filters, progress tracking, and saved tasks.</p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Local storage</span>
+            <span class="tag">Responsive UI</span>
+          </div>
+          <button class="card-hint" type="button" data-project-details="taskboard">Project details →</button>
+        </article>
+
+        <article class="project-card" data-project="expenses">
+          <div class="project-header">
+            <span class="project-icon">💸</span>
+            <a class="link-btn" href="expenses/index.html">↗ View live</a>
+          </div>
+          <p class="project-title">Pocket Ledger — Expense Tracker</p>
+          <p class="project-desc">Track daily spending, review category totals, and keep a simple monthly budget in view.</p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Data visualization</span>
+            <span class="tag">Local storage</span>
+          </div>
+          <button class="card-hint" type="button" data-project-details="expenses">Project details →</button>
+        </article>
+
+        <article class="project-card" data-project="focus">
+          <div class="project-header">
+            <span class="project-icon">⏱️</span>
+            <a class="link-btn" href="focus/index.html">↗ View live</a>
+          </div>
+          <p class="project-title">Flowtime — Focus Timer</p>
+          <p class="project-desc">A focused Pomodoro timer with adjustable work and break sessions and clear session controls.</p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Timers</span>
+            <span class="tag">Accessibility</span>
+          </div>
+          <button class="card-hint" type="button" data-project-details="focus">Project details →</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <p class="section-label">Skills</p>
+      <div class="skills-grid" id="skillsGrid">
+        <div class="skill-item"><span class="skill-dot solid"></span><div><p class="skill-name">HTML</p><p class="skill-level">Confident</p></div></div>
+        <div class="skill-item"><span class="skill-dot solid"></span><div><p class="skill-name">CSS</p><p class="skill-level">Confident</p></div></div>
+        <div class="skill-item"><span class="skill-dot solid"></span><div><p class="skill-name">JavaScript</p><p class="skill-level">Confident</p></div></div>
+        <div class="skill-item"><span class="skill-dot solid"></span><div><p class="skill-name">React</p><p class="skill-level">Project experience</p></div></div>
+        <div class="skill-item"><span class="skill-dot solid"></span><div><p class="skill-name">REST APIs</p><p class="skill-level">Project experience</p></div></div>
+        <div class="skill-item"><span class="skill-dot solid"></span><div><p class="skill-name">Web Storage</p><p class="skill-level">Project experience</p></div></div>
+        <div class="skill-item"><span class="skill-dot solid"></span><div><p class="skill-name">Git</p><p class="skill-level">Confident</p></div></div>
+        <div class="skill-item"><span class="skill-dot solid"></span><div><p class="skill-name">Responsive Design</p><p class="skill-level">Confident</p></div></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <p class="section-label">About</p>
+      <p class="about-text">
+        I'm <strong>Jose Diego Cordova</strong>, a self-taught web developer based in the Philippines,
+        building with JavaScript and React. My projects range from browser games and API-powered apps
+        to practical tools for planning, budgeting, and staying focused. I enjoy turning practical problems
+        into <strong>clear, responsive tools people can use</strong>.
+        <br><br>
+        When I'm not coding, I'm probably breaking something, fixing it, and learning twice as much
+        in the process.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <p class="section-label">Contact</p>
+      <p class="contact-desc">I'm open to junior developer roles, internships, and freelance projects. Have a role or idea in mind? I'd be glad to hear from you.</p>
+      <div class="contact-row">
+        <a href="mailto:diegocordova0419@gmail.com?subject=Let%27s%20work%20together" class="btn btn-primary">Email me</a>
+        <a href="https://github.com/diegocordova0419-spec" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
+        <a href="https://linkedin.com/in/DiegoCordova" target="_blank" rel="noopener noreferrer" class="btn btn-outline">LinkedIn</a>
+      </div>
+    </section>
+
+  </div><!-- end .container -->
+
+  <!-- Project modal -->
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true">
+    <div class="modal" id="modal">
+      <div class="modal-top">
+        <div class="modal-header">
+          <span class="modal-icon" id="modalIcon"></span>
+          <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+        </div>
+        <p class="modal-title" id="modalTitle"></p>
+        <p class="modal-subtitle" id="modalSubtitle"></p>
+      </div>
+      <div class="modal-divider"></div>
+      <div class="modal-body">
+        <p class="modal-section-label">About this project</p>
+        <p class="modal-desc" id="modalDesc"></p>
+        <p class="modal-section-label">What I built</p>
+        <ul class="modal-features" id="modalFeatures"></ul>
+        <p class="modal-section-label">Tech stack</p>
+        <div class="modal-tags" id="modalTags"></div>
+        <div class="modal-actions" id="modalActions"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <span>Built with HTML, CSS & JS — no frameworks.</span>
+      <span>Jose Diego Cordova © 2026</span>
+    </div>
+  </footer>
+
+  <!-- Your scripts -->
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f9f8">
+  <title>Movie Tracker — Portfolio Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="back-link" href="../index.html">← Portfolio</a>
+    <h1>Movie Tracker</h1>
+    <span class="header-note">Find your next favorite</span>
+  </header>
+  <main class="page-content">
+    <section class="intro">
+      <p class="eyebrow">Your personal watchlist</p>
+      <h2>What do you want to watch?</h2>
+      <p>Search movies, explore details, and save the ones you love.</p>
+    </section>
+    <form class="search-form" id="searchForm">
+      <label class="visually-hidden" for="movieSearch">Search movies</label>
+      <input id="movieSearch" type="search" placeholder="Search by movie title..." autocomplete="off">
+      <button type="submit">Search</button>
+    </form>
+    <p class="error-message" id="errorMessage" role="alert" aria-live="polite"></p>
+    <nav class="tabs" aria-label="Movie collection">
+      <button class="tab active" id="resultsTab" type="button" aria-selected="true">Search results</button>
+      <button class="tab" id="watchlistTab" type="button" aria-selected="false">Watchlist <span id="watchlistCount">0</span></button>
+    </nav>
+    <section id="movieGrid" class="movie-grid" aria-live="polite"></section>
+    <section id="emptyState" class="empty-state">
+      <span class="empty-icon" aria-hidden="true">🎬</span>
+      <h3 id="emptyTitle">Find something to watch</h3>
+      <p id="emptyText">Search for a movie by title to see results here.</p>
+    </section>
+  </main>
+  <div class="detail-backdrop" id="detailBackdrop" hidden>
+    <section class="detail-dialog" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <button class="close-button" id="closeDetails" type="button" aria-label="Close movie details">×</button>
+      <div id="detailContent"></div>
+    </section>
+  </div>
+</body>
+</html>

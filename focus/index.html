@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3fa">
+  <title>Flowtime — Focus Timer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="back-link" href="../index.html">← Portfolio</a>
+    <span class="brand"><span class="brand-mark">f</span> flowtime</span>
+    <span class="top-note">Find your rhythm.</span>
+  </header>
+  <main class="page">
+    <section class="intro">
+      <p class="eyebrow">A MOMENT FOR WHAT MATTERS</p>
+      <h1>One thing at a time.</h1>
+      <p>Settle in, find your focus, and give the next few minutes your full attention.</p>
+    </section>
+    <section class="timer-card" aria-label="Focus timer">
+      <div class="mode-switch" role="group" aria-label="Timer session">
+        <button type="button" class="mode-button active" data-mode="focus" aria-pressed="true">Focus</button>
+        <button type="button" class="mode-button" data-mode="short" aria-pressed="false">Short break</button>
+        <button type="button" class="mode-button" data-mode="long" aria-pressed="false">Long break</button>
+      </div>
+      <div class="timer-wrap">
+        <svg class="timer-ring" viewBox="0 0 220 220" aria-hidden="true">
+          <circle class="ring-track" cx="110" cy="110" r="96"></circle>
+          <circle class="ring-progress" id="ringProgress" cx="110" cy="110" r="96"></circle>
+        </svg>
+        <div class="timer-display">
+          <span id="modeLabel">FOCUS SESSION</span>
+          <time id="timer" aria-label="25 minutes remaining">25:00</time>
+          <span id="sessionStatus" role="status" aria-live="polite">Ready when you are</span>
+        </div>
+      </div>
+      <div class="duration-control" aria-label="Adjust session duration">
+        <button type="button" id="decreaseDuration" aria-label="Decrease session by one minute">−</button>
+        <span><strong id="durationLabel">25</strong> min</span>
+        <button type="button" id="increaseDuration" aria-label="Increase session by one minute">＋</button>
+      </div>
+      <div class="timer-actions">
+        <button class="start-button" id="toggleTimer" type="button">Start focus</button>
+        <button class="reset-button" id="resetTimer" type="button" aria-label="Reset timer">↺</button>
+      </div>
+    </section>
+    <div class="timer-note"><span>✳</span> Small moments of focus add up.</div>
+    <footer>Take a breath. You're right where you need to be.</footer>
+  </main>
+</body>
+</html>

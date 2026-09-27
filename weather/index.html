@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="../index.html" class="back-btn">← Portfolio</a>
+    <h1 class="app-title">Weather Dashboard</h1>
+  </header>
+
+  <!-- Search -->
+  <main class="container">
+    <div class="search-bar">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search city... e.g. Manila"
+        autocomplete="off"
+      />
+      <button id="searchBtn">Search</button>
+      <button id="locationBtn" title="Use my location">📍</button>
+    </div>
+    <p class="error-msg" id="errorMsg"></p>
+
+    <!-- Current weather -->
+    <div class="weather-card" id="weatherCard" style="display:none;">
+      <div class="weather-top">
+        <div>
+          <p class="city-name"  id="cityName"></p>
+          <p class="weather-date" id="weatherDate"></p>
+          <p class="weather-desc" id="weatherDesc"></p>
+        </div>
+        <div class="temp-block">
+          <img id="weatherIcon" src="" alt="weather icon">
+          <p class="temperature" id="temperature"></p>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat">
+          <p class="stat-label">Feels like</p>
+          <p class="stat-value" id="feelsLike"></p>
+        </div>
+        <div class="stat">
+          <p class="stat-label">Humidity</p>
+          <p class="stat-value" id="humidity"></p>
+        </div>
+        <div class="stat">
+          <p class="stat-label">Wind</p>
+          <p class="stat-value" id="wind"></p>
+        </div>
+        <div class="stat">
+          <p class="stat-label">Visibility</p>
+          <p class="stat-value" id="visibility"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5-day forecast -->
+    <div class="forecast-section" id="forecastSection" style="display:none;">
+      <p class="section-label">5-Day Forecast</p>
+      <div class="forecast-grid" id="forecastGrid"></div>
+    </div>
+
+    <!-- Empty state -->
+    <div class="empty-state" id="emptyState">
+      <p class="empty-icon">🌍</p>
+      <p class="empty-title">Search for a city</p>
+      <p class="empty-desc">Type a city name above or use your location to see the weather.</p>
+    </div>
+
+    <!-- Loading state -->
+    <div class="loading" id="loading" style="display:none;">
+      <div class="spinner"></div>
+      <p>Fetching weather...</p>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

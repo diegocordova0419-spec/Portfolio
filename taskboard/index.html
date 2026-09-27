@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f4">
+  <title>Daymark — Task Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="back-link" href="../index.html">← Portfolio</a>
+    <span class="brand"><span class="brand-mark">D</span> daymark</span>
+    <span class="top-note">A little more intentional.</span>
+  </header>
+  <main class="layout">
+    <section class="intro">
+      <p class="eyebrow">YOUR DAILY SPACE</p>
+      <h1>Make room for<br><span>what matters.</span></h1>
+      <p>A calm, simple place to gather your thoughts and move your day forward.</p>
+    </section>
+    <section class="task-panel" aria-labelledby="listHeading">
+      <div class="panel-heading">
+        <div><p class="eyebrow">MY LIST</p><h2 id="listHeading">Today's tasks</h2></div>
+        <p class="task-count"><strong id="remainingCount">0</strong><span>left to do</span></p>
+      </div>
+      <form class="task-form" id="taskForm">
+        <label class="visually-hidden" for="taskInput">Add a task</label>
+        <input id="taskInput" name="task" maxlength="100" placeholder="What needs your attention?" required>
+        <label class="visually-hidden" for="taskCategory">Task category</label>
+        <select id="taskCategory" name="category">
+          <option>Personal</option><option>Work</option><option>Learning</option>
+        </select>
+        <button type="submit">Add task <span aria-hidden="true">＋</span></button>
+      </form>
+      <p class="notice" id="notice" role="status" aria-live="polite"></p>
+      <div class="list-toolbar">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="active" aria-pressed="false">To do</button>
+          <button class="filter" type="button" data-filter="completed" aria-pressed="false">Done</button>
+        </div>
+        <button class="text-button" id="clearCompleted" type="button">Clear completed</button>
+      </div>
+      <ul class="task-list" id="taskList" aria-live="polite"></ul>
+      <div class="empty-state" id="emptyState">
+        <span aria-hidden="true">✳</span>
+        <p>Your list is clear.</p>
+        <small>Add a task above and take it one step at a time.</small>
+      </div>
+      <div class="progress-row"><span>Daily progress</span><strong id="progressLabel">0%</strong></div>
+      <div class="progress-track" role="progressbar" aria-label="Daily task progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progressBar"></span></div>
+    </section>
+    <footer>Small steps count. Your tasks stay on this device.</footer>
+  </main>
+</body>
+</html>

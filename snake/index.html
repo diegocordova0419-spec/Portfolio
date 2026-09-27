@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f9f8">
+  <title>Snake — Portfolio Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="back-link" href="../index.html">← Portfolio</a>
+    <h1>Snake</h1>
+    <span class="header-note">Canvas arcade</span>
+  </header>
+  <main class="game-layout">
+    <section class="game-panel" aria-label="Snake game">
+      <div class="score-row">
+        <div><span class="label">Score</span><strong id="score">0</strong></div>
+        <div><span class="label">Best</span><strong id="highScore">0</strong></div>
+        <button class="restart-button" id="restartButton" type="button">Restart</button>
+      </div>
+      <div class="board-wrap">
+        <canvas id="gameCanvas" width="600" height="400" aria-label="Snake game board"></canvas>
+        <div class="game-overlay" id="gameOverlay" hidden>
+          <div class="overlay-card">
+            <p class="eyebrow">Game over</p>
+            <h2>Nice run!</h2>
+            <p>You scored <strong id="finalScore">0</strong> points.</p>
+            <button id="playAgainButton" type="button">Play again</button>
+          </div>
+        </div>
+      </div>
+      <p class="help-text">Use the arrow keys or swipe on the board to move.</p>
+      <div class="touch-controls" aria-label="Touch controls">
+        <button type="button" data-direction="up" aria-label="Move up">↑</button>
+        <div>
+          <button type="button" data-direction="left" aria-label="Move left">←</button>
+          <button type="button" data-direction="down" aria-label="Move down">↓</button>
+          <button type="button" data-direction="right" aria-label="Move right">→</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
